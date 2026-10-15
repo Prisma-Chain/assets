@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f5f8fc"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0096b8"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00a383"/>
+    </marker>
+    <style>
+      .box { fill: #f4f7fb; stroke: #cfd8e6; stroke-width: 1.5; }
+      .hot { fill: #e9fbff; stroke: #0096b8; stroke-width: 1.5; }
+      .t { font-size: 15px; font-weight: 700; fill: #0b0f1a; }
+      .s { font-size: 11px; fill: #5c6680; }
+      .lbl { font-size: 11px; fill: #0087a6; letter-spacing: 1px; }
+      .ln { stroke: #0096b8; stroke-width: 1.8; fill: none; stroke-dasharray: 5 7; animation: flow 1.4s linear infinite; }
+      .back { stroke: #00a383; stroke-width: 1.8; fill: none; stroke-dasharray: 5 7; animation: flow 1.4s linear infinite; }
+      @keyframes flow { to { stroke-dashoffset: -24; } }
+    </style>
+  </defs>
+
+  <rect x="0.75" y="0.75" width="958.5" height="298.5" rx="16" fill="url(#bg)" stroke="#dde3ee" stroke-width="1.5"/>
+
+  <!-- wallet -->
+  <rect class="box" x="30" y="105" width="140" height="60" rx="10"/>
+  <text class="t" x="100" y="132" text-anchor="middle">Your wallet</text>
+  <text class="s" x="100" y="150" text-anchor="middle">keys stay with you</text>
+
+  <!-- validator -->
+  <rect class="hot" x="260" y="105" width="150" height="60" rx="10"/>
+  <text class="t" x="335" y="132" text-anchor="middle">Prisma validator</text>
+  <text class="s" x="335" y="150" text-anchor="middle">no custody</text>
+
+  <path class="ln" d="M170 135 H256" marker-end="url(#arr)"/>
+  <text class="lbl" x="213" y="125" text-anchor="middle">DELEGATE</text>
+
+  <!-- HSMs -->
+  <rect class="box" x="480" y="40" width="130" height="44" rx="10"/>
+  <text class="t" x="545" y="67" text-anchor="middle">HSM · DC 1</text>
+  <rect class="box" x="480" y="113" width="130" height="44" rx="10"/>
+  <text class="t" x="545" y="140" text-anchor="middle">HSM · DC 2</text>
+  <rect class="box" x="480" y="186" width="130" height="44" rx="10"/>
+  <text class="t" x="545" y="213" text-anchor="middle">HSM · DC 3</text>
+
+  <path class="ln" d="M410 135 C445 135 445 62 476 62" marker-end="url(#arr)"/>
+  <path class="ln" d="M410 135 H476" marker-end="url(#arr)"/>
+  <path class="ln" d="M410 135 C445 135 445 208 476 208" marker-end="url(#arr)"/>
+
+  <!-- quorum -->
+  <polygon class="hot" points="720,85 780,135 720,185 660,135"/>
+  <text class="t" x="720" y="133" text-anchor="middle">3-of-5</text>
+  <text class="s" x="720" y="150" text-anchor="middle">quorum</text>
+
+  <path class="ln" d="M610 62 C640 62 640 120 664 130" marker-end="url(#arr)"/>
+  <path class="ln" d="M610 135 H656" marker-end="url(#arr)"/>
+  <path class="ln" d="M610 208 C640 208 640 150 664 140" marker-end="url(#arr)"/>
+
+  <!-- signed block -->
+  <rect class="hot" x="815" y="110" width="120" height="50" rx="10"/>
+  <text class="t" x="875" y="140" text-anchor="middle">signed block</text>
+  <path class="ln" d="M780 135 H811" marker-end="url(#arr)"/>
+
+  <!-- rewards back -->
+  <path class="back" d="M875 160 V262 H100 V169" marker-end="url(#arrG)"/>
+  <text class="lbl" x="490" y="254" text-anchor="middle" fill="#00a383" style="fill:#00a383">PROTOCOL REWARDS − COMMISSION → STRAIGHT TO YOUR WALLET</text>
+</svg>
